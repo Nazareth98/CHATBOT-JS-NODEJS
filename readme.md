@@ -67,3 +67,58 @@ Dentro do arquivo 'data\tiposGrupos.js', existem duas possíveis alterações a 
 #### 6. SOLUCAÇÃO DE PROBLEMAS
 
 Quando ocorrer erros e problemas que necessitem de suporte técnico, entre em contato através do email patrickn.contact@gmail.com.
+
+
+
+
+# SMOKE-BOT Software Documentation
+
+## 1. INTRODUCTION
+The SMOKE-BOT Software is a WhatsApp-based application for querying a database, designed to facilitate access to information that optimizes the day-to-day activities of clients and sellers.
+
+## 2. INSTALLATION
+To install the SMOKE-BOT Software, follow these steps:
+
+Install a code editor (VS Code).
+Install a stable version of NodeJS.
+In your code editor's terminal, navigate to the project directory.
+Run the command 'npm install'.
+
+## 3. USER GUIDE
+The SMOKE-BOT Software offers the following main functionalities:
+Exchange rate query for the day.
+Current outstanding balance inquiry.
+Query for the last invoiced order on behalf of the respective client.
+Automatic notifications for pending, expiring, or expired balances.
+For sellers, product inventory query.
+To start using the software, follow these steps:
+
+In the following path 'helpers\mysql.js', add your Database access credentials to the 'createConnection' constant.
+In the following path '\botSmokeConsulta.js', define the port on which the backend will run. Then define the IdClient, which will be your bot user.
+In the terminal, execute 'node botSmokeConsulta.js' to start the server.
+Open your preferred browser and navigate to http://localhost:"REPLACE_WITH_DEFINED_PORT"/.
+Scan the QR Code generated with the mobile phone that will act as the application's bot.
+Now you can test our Bot!!
+
+## 4. SOFTWARE ARCHITECTURE
+The SMOKE-BOT Software is based on a three-tier architecture, consisting of:
+User Interface: All interactions are performed through WhatsApp.
+Application Server: Uses NodeJS to manage user requests.
+Database: The software only retrieves information from a pre-existing MySQL database.
+
+## 5. CONFIGURATIONS
+The SMOKE-BOT Software has some permission configuration options, including:
+### CATEGORIES
+Inside the 'data\categorias.js' file, add new categories following the standard structure. The property corresponds to the category description in the database, while its value refers to the internal category code.
+
+### ACCOUNT
+Inside the 'data\conta.js' file, edit it with updated account information, replacing the previous data or using "###" (hashtags) as the default.
+
+### QUERIES
+Inside the 'data\querys.js' file, define new paths for new queries or edit the default paths as needed.
+
+### GROUP TYPES
+Inside the 'data\tiposGrupos.js' file, there are two possible changes to be made. The first is to define which deposits each inventory can access. The second is where we register the groups related to each client.
+
+### TROUBLESHOOTING
+If you encounter errors and problems requiring technical support, please contact us via email at patrickn.contact@gmail.com.
