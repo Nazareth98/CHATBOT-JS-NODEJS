@@ -1,10 +1,10 @@
 # SMOKE-BOT Software Documentation
 
 <h1 align="center">
-  <img alt="" title="Aplicação em funcionamento no Desktop" src="https://github.com/Nazareth98/CHATBOT---JS---NODEJS-/blob/main/gifConsulta.gif" height="425" />
-  <img alt="" title="Aplicação em funcionamento no Desktop" src="https://github.com/Nazareth98/CHATBOT---JS---NODEJS-/blob/main/gifEstoque.gif" height="425" />
-  <img alt="" title="Aplicação em funcionamento no Desktop" src="https://github.com/Nazareth98/CHATBOT---JS---NODEJS-/blob/main/arquivoPdf.png" height="425" />
-  <img alt="" title="Aplicação em funcionamento no Desktop" src="https://github.com/Nazareth98/CHATBOT---JS---NODEJS-/blob/main/arquivoXlsx.png" height="425" />
+  <img alt="Gif exemplificando consultas" title="Sistema de consulta de dados" src="https://github.com/Nazareth98/CHATBOT---JS---NODEJS-/blob/main/gifConsulta.gif" height="425" />
+  <img alt="Gif exemplificando geração de arquivo" title="Sistema de consulta de estoque" src="https://github.com/Nazareth98/CHATBOT---JS---NODEJS-/blob/main/gifEstoque.gif" height="425" />
+  <img alt="Imagem de arquivo PDF gerado" title="Arquivo PDF gerado" src="https://github.com/Nazareth98/CHATBOT---JS---NODEJS-/blob/main/arquivoPdf.png" height="350" />
+  <img alt="Imagem de arquivo XLSX gerado" title="Arquivo XLSX gerado" src="https://github.com/Nazareth98/CHATBOT---JS---NODEJS-/blob/main/arquivoXlsx.png" height="350" />
 
 </h1>
 
