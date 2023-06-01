@@ -41,9 +41,10 @@ To start using the software, follow these steps:
 
 ## 4. SOFTWARE ARCHITECTURE
 The SMOKE-BOT Software is based on a three-tier architecture, consisting of:
-User Interface: All interactions are performed through WhatsApp.
-Application Server: Uses NodeJS to manage user requests.
-Database: The software only retrieves information from a pre-existing MySQL database.
+
+- User Interface: All interactions are performed through WhatsApp.
+- Application Server: Uses NodeJS to manage user requests.
+- Database: The software only retrieves information from a pre-existing MySQL database.
 
 ## 5. CONFIGURATIONS
 The SMOKE-BOT Software has some permission configuration options, including:
