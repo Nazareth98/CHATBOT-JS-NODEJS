@@ -84,6 +84,19 @@ const CATEGORIAS = {
   //
 };
 
+/* PORTAS */
+const PORT_1 = "####";
+const PORT_2 = "####";
+
+/* ID CLIENT */
+const ID_CLIENT = "####";
+
+/* CREDENCIAS PARA BANCO DE DADOS */
+const HOST = "####";
+const USER = "####";
+const PASSWORD = "####";
+const DATABASE = "####";
+
 module.exports = {
   GRUPOS_AUTORIZADOS,
   GRUPOS_FINANCEIRO,
@@ -93,4 +106,11 @@ module.exports = {
   PEDIDOS_QUERY,
   DADOS_CONTA,
   CATEGORIAS,
+  PORT_1,
+  PORT_2,
+  ID_CLIENT,
+  HOST,
+  USER,
+  PASSWORD,
+  DATABASE,
 };

@@ -9,10 +9,11 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
 const { getEstoque } = require("./scripts/getEstoque.js");
+const { PORT_2, ID_CLIENT } = require("./data/variaveisAmbiente.js");
 
 // PORTA ONDE O SERVIÇO SERÁ INICIADO
-const port = 8001;
-const idClient = "bot-smoke-estoque";
+const port = PORT_2;
+const idClient = ID_CLIENT;
 
 // SERVIÇO EXPRESS
 app.use(express.json());

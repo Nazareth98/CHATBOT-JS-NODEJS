@@ -1,13 +1,14 @@
 // BIBLIOTECAS UTILIZADAS PARA COMPOSIÇÃO DA API
 const mysql = require("mysql2/promise");
+const { HOST, USER, PASSWORD, DATABASE } = require("../data/variaveisAmbiente");
 
 // CREDENCIAIS DO BANCO DE DADOS MYSQL
 const createConnection = async () => {
   return await mysql.createConnection({
-    host: "#######",
-    user: "#######",
-    password: "#######",
-    database: "#######",
+    host: HOST,
+    user: USER,
+    password: PASSWORD,
+    database: DATABASE,
   });
 };
 
