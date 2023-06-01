@@ -1,5 +1,13 @@
 # SMOKE-BOT Software Documentation
 
+<h1 align="center">
+  <img alt="" title="Aplicação em funcionamento no Desktop" src="https://github.com/Nazareth98/CHATBOT---JS---NODEJS-/blob/main/gifConsulta.gif" height="425" />
+  <img alt="" title="Aplicação em funcionamento no Desktop" src="https://github.com/Nazareth98/CHATBOT---JS---NODEJS-/blob/main/gifEstoque.gif" height="425" />
+  <img alt="" title="Aplicação em funcionamento no Desktop" src="https://github.com/Nazareth98/CHATBOT---JS---NODEJS-/blob/main/arquivoPdf.png" height="425" />
+  <img alt="" title="Aplicação em funcionamento no Desktop" src="https://github.com/Nazareth98/CHATBOT---JS---NODEJS-/blob/main/arquivoXlsx.png" height="425" />
+
+</h1>
+
 ## 1. INTRODUCTION
 The SMOKE-BOT Software is a WhatsApp-based application for querying a database, designed to facilitate access to information that optimizes the day-to-day activities of clients and sellers.
 
