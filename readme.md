@@ -96,10 +96,10 @@ O Software SMOKE-BOT oferece as seguintes funcionalidades principais:
 
 Para começar a usar o software, siga estas etapas:
 
-1. No seguinte caminho 'helpers\mysql.js', adicione suas credenciais de acesso ao Banco de Dados á constante 'createConnection'.
-2. No seguinte caminho '\botSmokeConsulta.js', defina a porta em que o backend irá rodar. Em seguida defina o IdClient, que será seu usuário bot.
-3. No terminal, execute 'node botSmokeConsulta.js' para iniciar o servidor.
-4. Abra em seu navegador de preferência o caminho http://localhost:"SUBSTITUA_PELA_PORTA_DEFINIDA"/.
+1. No seguinte caminho `helpers\mysql.js`, adicione suas credenciais de acesso ao Banco de Dados á constante 'createConnection'.
+2. No seguinte caminho `\botSmokeConsulta.js`, defina a porta em que o backend irá rodar. Em seguida defina o IdClient, que será seu usuário bot.
+3. No terminal, execute `node botSmokeConsulta.js` para iniciar o servidor.
+4. Abra em seu navegador de preferência o caminho `http://localhost:"SUBSTITUA_PELA_PORTA_DEFINIDA"/`.
 5. Escaneie o QR Code que será gerado com o celular que será o Bot da aplicação.
 6. Agora você já pode testar nosso Robô!!
 
@@ -117,19 +117,19 @@ O Software SMOKE-BOT possui algumas opções de configuraçã de permissões que
 
 ### CATEGORIAS
 
-Dentro do arquivo 'data\categorias.js', adicione novas categorias seguindo a estrutura padrão. Onde a propriedade corresponde a descrição da categoria no Banco de Dados, enquanto seu valor refére-se ao código interno da categoria.
+Dentro do arquivo `data\categorias.js`, adicione novas categorias seguindo a estrutura padrão. Onde a propriedade corresponde a descrição da categoria no Banco de Dados, enquanto seu valor refére-se ao código interno da categoria.
 
 ### CONTA
 
-Dentro do arquivo 'data\conta.js', edite conforme dados de conta atualizados substituíndo os dados anteriores ou "###" (hashtags) por padrão.
+Dentro do arquivo `data\conta.js`, edite conforme dados de conta atualizados substituíndo os dados anteriores ou "###" (hashtags) por padrão.
 
 ### QUERYS
 
-Dentro do arquivo 'data\querys.js', defina novos caminhos para novas consultas ou edite os caminhos padrões conforme necessidade.
+Dentro do arquivo `data\querys.js`, defina novos caminhos para novas consultas ou edite os caminhos padrões conforme necessidade.
 
 ### TIPOS DE GRUPOS
 
-Dentro do arquivo 'data\tiposGrupos.js', existem duas possíveis alterações a serem realizadas, a primeira é a definição de quais depósitos cada estoque pode ter acesso. A segunda é onde cadastramos os grupos referentes a cada cliente.
+Dentro do arquivo `data\tiposGrupos.js`, existem duas possíveis alterações a serem realizadas, a primeira é a definição de quais depósitos cada estoque pode ter acesso. A segunda é onde cadastramos os grupos referentes a cada cliente.
 
 #### 6. SOLUCAÇÃO DE PROBLEMAS
 
