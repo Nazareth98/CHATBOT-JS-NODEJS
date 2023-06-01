@@ -23,7 +23,7 @@ O Software SMOKE-BOT oferece as seguintes funcionalidades principais:
 - Consulta a taxa de câmbio do dia.
 - Consulta ao saldo devedor atual.
 - Consulta ao último pedido faturado em nome do respectivo cliente.
-- Notificações automáticas de saldo presetes a vencer, vencendo ou vencidos.
+- Notificações automáticas de saldo prestes a vencer, vencendo ou vencidos.
 - Para vendedores, consulta ao estoque de produtos. Gerando automaticamente arquivo `.xlsx` com os dados necessários.
 - Geração automática de arquivo `.pdf` com dados dos pedidios faturados.
 
