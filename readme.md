@@ -136,7 +136,7 @@ Dentro do arquivo `data\querys.js`, defina novos caminhos para novas consultas o
 
 Dentro do arquivo `data\tiposGrupos.js`, existem duas possíveis alterações a serem realizadas, a primeira é a definição de quais depósitos cada estoque pode ter acesso. A segunda é onde cadastramos os grupos referentes a cada cliente.
 
-#### 6. SOLUCAÇÃO DE PROBLEMAS
+## 6. SOLUCAÇÃO DE PROBLEMAS
 
 Quando ocorrer erros e problemas que necessitem de suporte técnico, entre em contato através do email patrickn.contact@gmail.com.
 
