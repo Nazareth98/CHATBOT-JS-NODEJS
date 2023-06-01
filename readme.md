@@ -29,14 +29,15 @@ The SMOKE-BOT Software offers the following main functionalities:
 - Query for the last invoiced order on behalf of the respective client.
 - Automatic notifications for pending, expiring, or expired balances.
 - For sellers, product inventory query.
-- To start using the software, follow these steps:
 
-In the following path `helpers\mysql.js`, add your Database access credentials to the `createConnection` constant.
-In the following path `\botSmokeConsulta.js`, define the port on which the backend will run. Then define the IdClient, which will be your bot user.
-In the terminal, execute `node botSmokeConsulta.js` to start the server.
-Open your preferred browser and navigate to `http://localhost:"REPLACE_WITH_DEFINED_PORT"/`.
-Scan the QR Code generated with the mobile phone that will act as the application's bot.
-Now you can test our Bot!!
+To start using the software, follow these steps:
+
+- In the following path `helpers\mysql.js`, add your Database access credentials to the `createConnection` constant.
+- In the following path `\botSmokeConsulta.js`, define the port on which the backend will run. Then define the IdClient, which will be your bot user.
+- In the terminal, execute `node botSmokeConsulta.js` to start the server.
+- Open your preferred browser and navigate to `http://localhost:"REPLACE_WITH_DEFINED_PORT"/`.
+- Scan the QR Code generated with the mobile phone that will act as the application's bot.
+- Now you can test our Bot!!
 
 ## 4. SOFTWARE ARCHITECTURE
 The SMOKE-BOT Software is based on a three-tier architecture, consisting of:
