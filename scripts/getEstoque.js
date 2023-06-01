@@ -1,24 +1,18 @@
 const db = require("../helpers/mysql");
 const { escreverXLSX } = require("./generateFile");
-const { categorias } = require("../data/categorias");
-const {
-  GRUPOS_FINANCEIRO,
-  GRUPOS_AUTORIZADOS,
-} = require("../data/tiposGrupos");
+const { CATEGORIAS, GRUPOS_AUTORIZADOS } = require("../data/variaveisAmbiente");
 
 let escopoAtual;
 
-const getDepositosAutorizados = () => {
+const getDepositosAutorizados = (remetente) => {
   let depositosAutorizados = [];
   for (const prop in GRUPOS_AUTORIZADOS) {
-    if (GRUPOS_AUTORIZADOS[prop].includes("120363151279086480@g.us")) {
+    if (GRUPOS_AUTORIZADOS[prop].includes(remetente)) {
       depositosAutorizados.push(prop);
     }
   }
   return depositosAutorizados;
 };
-
-let depositosAutorizados = getDepositosAutorizados();
 
 const getCategoria = async (
   dadosEstoque,
@@ -78,8 +72,8 @@ const getEstoque = async (keyword, remetente, MessageMedia, client) => {
         escopoAtual = "";
         return false;
       case "#black sheep":
-        promises = depositosAutorizados.map(async (deposito) => {
-          dadosEstoque = await db.getData(deposito, categorias.BLACK_SHEEP);
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
+          dadosEstoque = await db.getData(deposito, CATEGORIAS.BLACK_SHEEP);
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });
         results = await Promise.all(promises);
@@ -87,90 +81,90 @@ const getEstoque = async (keyword, remetente, MessageMedia, client) => {
         break;
 
       case "#elfbar 4000":
-        promises = depositosAutorizados.map(async (deposito) => {
-          dadosEstoque = await db.getData(deposito, categorias.ELFBAR_4000);
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
+          dadosEstoque = await db.getData(deposito, CATEGORIAS.ELFBAR_4000);
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });
         results = await Promise.all(promises);
         sendFile(remetente, results, client, MessageMedia);
         break;
       case "#elfbar 6000":
-        promises = depositosAutorizados.map(async (deposito) => {
-          dadosEstoque = await db.getData(deposito, categorias.ELFBAR_6000);
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
+          dadosEstoque = await db.getData(deposito, CATEGORIAS.ELFBAR_6000);
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });
         results = await Promise.all(promises);
         sendFile(remetente, results, client, MessageMedia);
         break;
       case "#desconto ignite":
-        promises = depositosAutorizados.map(async (deposito) => {
-          dadosEstoque = await db.getData(deposito, categorias.DESCONTO_IGNITE);
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
+          dadosEstoque = await db.getData(deposito, CATEGORIAS.DESCONTO_IGNITE);
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });
         results = await Promise.all(promises);
         sendFile(remetente, results, client, MessageMedia);
         break;
       case "#v15":
-        promises = depositosAutorizados.map(async (deposito) => {
-          dadosEstoque = await db.getData(deposito, categorias.IGNITE_V15);
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
+          dadosEstoque = await db.getData(deposito, CATEGORIAS.IGNITE_V15);
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });
         results = await Promise.all(promises);
         sendFile(remetente, results, client, MessageMedia);
         break;
       case "#v25":
-        promises = depositosAutorizados.map(async (deposito) => {
-          dadosEstoque = await db.getData(deposito, categorias.IGNITE_V25);
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
+          dadosEstoque = await db.getData(deposito, CATEGORIAS.IGNITE_V25);
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });
         results = await Promise.all(promises);
         sendFile(remetente, results, client, MessageMedia);
         break;
       case "#v35":
-        promises = depositosAutorizados.map(async (deposito) => {
-          dadosEstoque = await db.getData(deposito, categorias.IGNITE_V35);
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
+          dadosEstoque = await db.getData(deposito, CATEGORIAS.IGNITE_V35);
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });
         results = await Promise.all(promises);
         sendFile(remetente, results, client, MessageMedia);
         break;
       case "#v40":
-        promises = depositosAutorizados.map(async (deposito) => {
-          dadosEstoque = await db.getData(deposito, categorias.IGNITE_V40);
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
+          dadosEstoque = await db.getData(deposito, CATEGORIAS.IGNITE_V40);
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });
         results = await Promise.all(promises);
         sendFile(remetente, results, client, MessageMedia);
         break;
       case "#v50":
-        promises = depositosAutorizados.map(async (deposito) => {
-          dadosEstoque = await db.getData(deposito, categorias.IGNITE_V50);
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
+          dadosEstoque = await db.getData(deposito, CATEGORIAS.IGNITE_V50);
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });
         results = await Promise.all(promises);
         sendFile(remetente, results, client, MessageMedia);
         break;
       case "#v60":
-        promises = depositosAutorizados.map(async (deposito) => {
-          dadosEstoque = await db.getData(deposito, categorias.IGNITE_V60);
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
+          dadosEstoque = await db.getData(deposito, CATEGORIAS.IGNITE_V60);
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });
         results = await Promise.all(promises);
         sendFile(remetente, results, client, MessageMedia);
         break;
       case "#loom 7000":
-        promises = depositosAutorizados.map(async (deposito) => {
-          dadosEstoque = await db.getData(deposito, categorias.LOOM_7000);
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
+          dadosEstoque = await db.getData(deposito, CATEGORIAS.LOOM_7000);
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });
         results = await Promise.all(promises);
         sendFile(remetente, results, client, MessageMedia);
         break;
       case "#relx moon":
-        promises = depositosAutorizados.map(async (deposito) => {
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
           dadosEstoque = await db.getData(
             deposito,
-            categorias.RELX_MOON_1500_PUFF
+            CATEGORIAS.RELX_MOON_1500_PUFF
           );
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });
@@ -178,18 +172,18 @@ const getEstoque = async (keyword, remetente, MessageMedia, client) => {
         sendFile(remetente, results, client, MessageMedia);
         break;
       case "#vaporesso":
-        promises = depositosAutorizados.map(async (deposito) => {
-          dadosEstoque = await db.getData(deposito, categorias.VAPORESSO);
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
+          dadosEstoque = await db.getData(deposito, CATEGORIAS.VAPORESSO);
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });
         results = await Promise.all(promises);
         sendFile(remetente, results, client, MessageMedia);
         break;
       case "#waka 10000 3%":
-        promises = depositosAutorizados.map(async (deposito) => {
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
           dadosEstoque = await db.getData(
             deposito,
-            categorias.WAKKA_POD_10000_3
+            CATEGORIAS.WAKKA_POD_10000_3
           );
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });
@@ -197,10 +191,10 @@ const getEstoque = async (keyword, remetente, MessageMedia, client) => {
         sendFile(remetente, results, client, MessageMedia);
         break;
       case "#waka 10000 5%":
-        promises = depositosAutorizados.map(async (deposito) => {
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
           dadosEstoque = await db.getData(
             deposito,
-            categorias.WAKKA_POD_10000_5
+            CATEGORIAS.WAKKA_POD_10000_5
           );
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });
@@ -208,42 +202,42 @@ const getEstoque = async (keyword, remetente, MessageMedia, client) => {
         sendFile(remetente, results, client, MessageMedia);
         break;
       case "#waka 1800":
-        promises = depositosAutorizados.map(async (deposito) => {
-          dadosEstoque = await db.getData(deposito, categorias.WAKKA_POD_1800);
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
+          dadosEstoque = await db.getData(deposito, CATEGORIAS.WAKKA_POD_1800);
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });
         results = await Promise.all(promises);
         sendFile(remetente, results, client, MessageMedia);
         break;
       case "#waka 3500":
-        promises = depositosAutorizados.map(async (deposito) => {
-          dadosEstoque = await db.getData(deposito, categorias.WAKKA_POD_3500);
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
+          dadosEstoque = await db.getData(deposito, CATEGORIAS.WAKKA_POD_3500);
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });
         results = await Promise.all(promises);
         sendFile(remetente, results, client, MessageMedia);
         break;
       case "#waka 600":
-        promises = depositosAutorizados.map(async (deposito) => {
-          dadosEstoque = await db.getData(deposito, categorias.WAKKA_POD_600);
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
+          dadosEstoque = await db.getData(deposito, CATEGORIAS.WAKKA_POD_600);
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });
         results = await Promise.all(promises);
         sendFile(remetente, results, client, MessageMedia);
         break;
       case "#waka 6000":
-        promises = depositosAutorizados.map(async (deposito) => {
-          dadosEstoque = await db.getData(deposito, categorias.WAKKA_POD_6000);
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
+          dadosEstoque = await db.getData(deposito, CATEGORIAS.WAKKA_POD_6000);
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });
         results = await Promise.all(promises);
         sendFile(remetente, results, client, MessageMedia);
         break;
       case "#waka 6000 5%":
-        promises = depositosAutorizados.map(async (deposito) => {
+        promises = getDepositosAutorizados(remetente).map(async (deposito) => {
           dadosEstoque = await db.getData(
             deposito,
-            categorias.WAKKA_POD_6000_5
+            CATEGORIAS.WAKKA_POD_6000_5
           );
           return getCategoria(dadosEstoque, MessageMedia, deposito, remetente);
         });

@@ -1,7 +1,6 @@
 // BIBLIOTECAS UTILIZADAS PARA COMPOSIÇÃO DA API
 const { Client, LocalAuth, MessageMedia } = require("whatsapp-web.js");
 const express = require("express");
-const { body, validationResult } = require("express-validator");
 const socketIO = require("socket.io");
 const qrcode = require("qrcode");
 const http = require("http");
@@ -9,8 +8,6 @@ const fileUpload = require("express-fileupload");
 const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
-const { formatId } = require("./scripts/formatObjects.js");
-const { GRUPOS_FINANCEIRO } = require("./data/tiposGrupos.js");
 const { getEstoque } = require("./scripts/getEstoque.js");
 
 // PORTA ONDE O SERVIÇO SERÁ INICIADO

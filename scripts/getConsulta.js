@@ -1,8 +1,10 @@
 const db = require("../helpers/mysql");
-const { DADOS_CONTA } = require("../data/conta");
 const { formatPedidos } = require("./formatObjects");
-const { PEDIDOS_QUERY } = require("../data/querys");
-const { GRUPOS_FINANCEIRO } = require("../data/tiposGrupos");
+const {
+  PEDIDOS_QUERY,
+  GRUPOS_FINANCEIRO,
+  DADOS_CONTA,
+} = require("../data/variaveisAmbiente");
 
 // VÁRIAVEL QUE
 let escopoAtual = "";
