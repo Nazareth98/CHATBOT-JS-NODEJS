@@ -24,12 +24,12 @@ To install the SMOKE-BOT Software, follow these steps:
 
 ## 3. USER GUIDE
 The SMOKE-BOT Software offers the following main functionalities:
-Exchange rate query for the day.
-Current outstanding balance inquiry.
-Query for the last invoiced order on behalf of the respective client.
-Automatic notifications for pending, expiring, or expired balances.
-For sellers, product inventory query.
-To start using the software, follow these steps:
+- Exchange rate query for the day.
+- Current outstanding balance inquiry.
+- Query for the last invoiced order on behalf of the respective client.
+- Automatic notifications for pending, expiring, or expired balances.
+- For sellers, product inventory query.
+- To start using the software, follow these steps:
 
 In the following path `helpers\mysql.js`, add your Database access credentials to the `createConnection` constant.
 In the following path `\botSmokeConsulta.js`, define the port on which the backend will run. Then define the IdClient, which will be your bot user.
