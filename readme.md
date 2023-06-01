@@ -14,10 +14,13 @@ The SMOKE-BOT Software is a WhatsApp-based application for querying a database, 
 ## 2. INSTALLATION
 To install the SMOKE-BOT Software, follow these steps:
 
-Install a code editor (VS Code).
-Install a stable version of NodeJS.
-In your code editor's terminal, navigate to the project directory.
-Run the command `npm install`.
+1. Install a code editor (VS Code).
+2. Install a stable version of NodeJS.
+3. Open the terminal or command prompt of your operating system. In Windows, you can use Command Prompt or PowerShell.
+4. Navigate to the directory where you want to clone the repository: Use the `cd` command to navigate to the desired directory. For example, if you want to clone the repository in the "Documents" directory, you can run `cd Documents` to enter the "Documents" directory.
+5. Clone the repository: In the terminal, execute the 'git clone' command followed by the URL of the Git repository you want to clone. `git clone https://github.com/Nazareth98/CHATBOT---JS---NODEJS-.git`
+6. Navigate to the cloned repository directory: Use the 'cd' command to enter the directory of the repository you just cloned. `cd CHATBOT---JS---NODEJS-`
+7.Install dependencies: You will need to install the dependencies before running the project. In the case of this project, you can use the `npm install` or `yarn` command to install the dependencies listed in the `package.json` file.
 
 ## 3. USER GUIDE
 The SMOKE-BOT Software offers the following main functionalities:
