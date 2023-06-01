@@ -42,7 +42,7 @@ O Software SMOKE-BOT é baseado em uma arquitetura de três camadas, composta po
 
 - Interface do usuário: toda interação é realizada através do Whatsapp.
 - Servidor de aplicativos: utiliza o NodeJS para gerenciar as requisições dos usuários.
-- Banco de dados: o software apenas busca as informações em uma base de dados pré-existente construída em MySQL.
+- Banco de dados: o software apenas consulta as informações em uma base de dados pré-existente construída em MySQL.
 
 ## 5. CONFIGURAÇÕES
 
