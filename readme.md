@@ -10,8 +10,11 @@ Para instalar o Software SMOKE-BOT, siga estas etapas:
 
 1. Instale um editor de cógido (VS Code)
 2. Instale uma versão estável do NodeJS
-3. No terminal do seu editor de código, acesse o diretório do projeto
-4. Execute o comando 'npm install'
+3. Abra o terminal ou prompt de comando do seu sistema operacional. No Windows, você pode usar o Prompt de Comando ou o PowerShell.
+4. Navegue para o diretório onde deseja clonar o repositório: Use o comando 'cd' para navegar para o diretório desejado. Por exemplo, se você deseja clonar o repositório no diretório "Documentos", você pode executar 'cd' Documents para entrar no diretório "Documentos".
+5. Clone o repositório: No terminal, execute o comando git clone seguido do URL do repositório Git que deseja clonar. `git clone https://github.com/Nazareth98/CHATBOT---JS---NODEJS-.git`
+6. Navegue para o diretório do repositório clonado: Use o comando `cd` para entrar no diretório do repositório que você acabou de clonar. `cd CHATBOT---JS---NODEJS-`
+7.Instale dependências: Você precisará instalar as dependências antes de executar o projeto. No caso desse projeto, você pode usar o comando `npm install` ou `yarn` para instalar as dependências listadas no arquivo `package.json`.
 
 ## 3. GUIA DO USUÁRIO
 
@@ -21,7 +24,8 @@ O Software SMOKE-BOT oferece as seguintes funcionalidades principais:
 - Consulta ao saldo devedor atual.
 - Consulta ao último pedido faturado em nome do respectivo cliente.
 - Notificações automáticas de saldo presetes a vencer, vencendo ou vencidos.
-- Para vendedores, consulta ao estoque de produtos.
+- Para vendedores, consulta ao estoque de produtos. Gerando automaticamente arquivo `xlsx` com os dados necessários.
+- Geração automática de arquivo `PDF` com dados dos pedidios faturados.
 
 Para começar a usar o software, siga estas etapas:
 
