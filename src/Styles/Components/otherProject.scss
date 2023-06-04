@@ -1,0 +1,29 @@
+@use '../variables.scss';
+@use '../mixins.scss';
+
+
+.cards-container {
+    flex-direction: column;
+    @include mixins.transition;
+    button {
+        @include mixins.button
+    }
+    .cards-box {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.94rem;
+        @media (max-width: '60rem') {
+            grid-template-columns: 1fr 1fr;
+            width: 90%;
+        }
+        @media (max-width: '35rem') {
+            grid-template-columns: 1fr;
+        }
+    }
+    .button-box {
+        margin: 1.25rem 0;
+        
+    }
+
+}

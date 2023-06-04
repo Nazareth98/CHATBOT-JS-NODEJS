@@ -1,0 +1,10 @@
+@use '../variables.scss';
+@use '../mixins.scss';
+
+
+.projects-container {
+    @include mixins.center;
+    flex-direction: column;
+    margin-bottom: 6.25rem;
+}
+

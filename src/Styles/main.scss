@@ -1,0 +1,58 @@
+@use "variables";
+@use "mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0;
+  box-sizing: border-box;
+  color: variables.$color-text;
+  text-decoration: none;
+}
+
+body,
+html {
+  background-color: variables.$color-background;
+  font-family: variables.$font-text;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  scroll-behavior: smooth;
+  @media (max-width: "60rem") {
+    width: 100%;
+  }
+}
+
+.container {
+  width: 50rem;
+  min-height: 90vh;
+  @include mixins.center;
+  margin: 0 auto 1.25rem auto;
+
+  @media (max-width: "60rem") {
+    width: 100%;
+  }
+}
+
+.title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: variables.$color-primary;
+}
+
+.typing-animation {
+  overflow: hidden; /* Esconde o overflow para dar o efeito de digitação */
+  animation: typing 1s steps(40) infinite;
+
+  @keyframes typing {
+    from {
+      width: 0; /* Inicia com largura 0 */
+    }
+    to {
+      width: 100%; /* Aumenta a largura para 100% */
+    }
+  }
+}

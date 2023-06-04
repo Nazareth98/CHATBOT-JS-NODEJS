@@ -1,0 +1,45 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+.icons-container {
+  position: fixed;
+  top: 45%;
+  transform: translateY(-50%);
+  left: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+  animation: floating-animation 15s ease-in-out infinite;
+
+  a {
+    padding: 0.125rem 0.313rem;
+    &:hover {
+      i {
+        color: variables.$color-secundary;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  i {
+    color: variables.$color-text;
+    @include mixins.transition;
+  }
+
+  @media (max-width: "70rem") {
+    display: none;
+  }
+}
+
+@keyframes floating-animation {
+  0% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}

@@ -1,0 +1,41 @@
+@use '../variables.scss';
+@use '../mixins.scss';
+
+
+.email-container {
+    position: fixed;
+    top: 70%;
+    left: 90%;
+    rotate: -90deg;
+    @include mixins.transition;
+
+    &:hover {
+        a {
+            color: variables.$color-secundary;
+        }
+
+    }
+    a {
+        @include mixins.transition;
+        color: variables.$color-text;
+        font-family: variables.$font-special;
+        font-weight: bold;
+        font-size: 1rem;
+        &:before {
+            content: '';
+            display: block;
+            height: 11.25rem;
+            width: 0.06rem;
+            position: absolute;
+            left: -50%;
+            top: -295%;
+            rotate: 90deg;
+            transform: translateX(-50%);
+            background-color: variables.$color-text;
+        }
+    }
+
+    @media (max-width: "70rem") {
+        display: none;
+    }
+}

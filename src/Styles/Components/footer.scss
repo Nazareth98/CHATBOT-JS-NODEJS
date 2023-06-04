@@ -1,0 +1,23 @@
+@use '../variables.scss';
+@use '../mixins.scss';
+
+.footer-container {
+    width: 50rem;
+    min-height: 10rem;
+    @include mixins.center;
+    flex-direction: column;
+    margin: auto;
+    i {
+        margin: .625rem .31rem;
+    }
+
+    a{
+        &:hover {
+            color: variables.$color-secundary;
+        }
+    }
+
+    @media (max-width: '60rem') {
+        width: 90%;
+    }
+}

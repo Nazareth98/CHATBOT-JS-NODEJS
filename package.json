@@ -1,43 +1,40 @@
 {
-  "name": "bot-smoke",
-  "version": "1.0.0",
-  "description": "bot-smoke: based on WWebJS API",
-  "main": "app.js",
-  "scripts": {
-    "start": "node app.js",
-    "start:dev": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "whatsapp-api",
-    "node.js"
-  ],
-  "author": "Pedro",
-  "license": "MIT",
+  "name": "patrick-nazareth",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "@google-cloud/dialogflow": "^4.6.0",
-    "actions-on-google": "^2.4.1",
-    "axios": "^0.21.1",
-    "dialogflow-fulfillment": "^0.6.1",
-    "express": "^4.17.1",
-    "express-fileupload": "^1.2.0",
-    "express-validator": "^6.9.2",
-    "fs": "0.0.1-security",
-    "http": "0.0.1-security",
-    "jspdf": "^2.5.1",
-    "jspdf-autotable": "^3.5.29",
-    "mime-types": "^2.1.32",
-    "mysql2": "^2.3.3",
-    "node-cron": "^3.0.2",
-    "openai": "^3.2.1",
-    "pb-util": "^1.0.3",
-    "qrcode": "^1.4.4",
-    "socket.io": "2.3.0",
-    "util": "^0.12.4",
-    "whatsapp-web.js": "^1.19.5",
-    "xlsx": "^0.18.5"
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "aos": "^2.3.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "sass": "^1.58.0",
+    "web-vitals": "^2.1.4"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.19"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

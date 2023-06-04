@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0a4158de.css",
+    "main.js": "/static/js/main.5e16d93c.js",
+    "static/media/imgAbout.png": "/static/media/imgAbout.b0e241729624bdc5af96.png",
+    "static/media/chatBG.png": "/static/media/chatBG.2e7d53f83c5d547c73f1.png",
+    "static/media/rejuvenescerBG.png": "/static/media/rejuvenescerBG.585dadad68106685e0d9.png",
+    "static/media/Patrick Nazareth - Currículo.pdf": "/static/media/Patrick Nazareth - Currículo.3f255269bfdfeb11bf36.pdf",
+    "static/media/dogsBG.png": "/static/media/dogsBG.9ed512aca75d01f3ede5.png",
+    "index.html": "/index.html",
+    "main.0a4158de.css.map": "/static/css/main.0a4158de.css.map",
+    "main.5e16d93c.js.map": "/static/js/main.5e16d93c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a4158de.css",
+    "static/js/main.5e16d93c.js"
+  ]
+}

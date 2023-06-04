@@ -1,0 +1,49 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+.section-header {
+  width: 100%;
+  font-size: 2rem;
+  color: variables.$color-primary;
+  position: relative;
+  margin-bottom: 2.5rem;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 110%;
+    left: -7%;
+    width: 70%;
+    opacity: 0.7;
+    height: 0.125rem;
+    background-color: variables.$color-secundary;
+    animation: line-animation 40s normal infinite;
+  }
+
+  span {
+    color: variables.$color-secundary;
+    font-family: variables.$font-special;
+  }
+
+  @media (max-width: "60rem") {
+    width: 90%;
+  }
+}
+
+@keyframes line-animation {
+  0% {
+    opacity: 0.3;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  100% {
+    opacity: 0.5;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+}

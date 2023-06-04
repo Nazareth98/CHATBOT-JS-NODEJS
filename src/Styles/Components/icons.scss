@@ -1,0 +1,20 @@
+@use '../variables.scss';
+@use '../mixins.scss';
+
+
+
+.project-info-icons {
+    i {
+        @include mixins.transition;
+        &:hover {
+            color: variables.$color-primary;
+            transform: scale(1.1);
+        }
+    }
+    
+    a {
+        margin-left:.625rem;
+        cursor: pointer;
+    }
+
+}

@@ -1,0 +1,167 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+.project-box {
+  width: 100%;
+  display: flex;
+  position: relative;
+  margin-bottom: 4rem;
+
+  .project-info-container {
+    z-index: 2;
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 30rem;
+    i {
+      @include mixins.transition;
+      &:hover {
+        color: variables.$color-primary;
+        transform: scale(1.1);
+      }
+    }
+
+    .project-info-title,
+    .project-info-icons {
+      a {
+        margin-left: 0.625rem;
+      }
+    }
+
+    .project-info-description {
+      background-color: variables.$color-alternate;
+      padding: 1.25rem;
+      font-size: 0.9rem;
+      border-radius: 0.5rem;
+      margin: 0.625rem 0;
+    }
+  }
+
+  .project-img {
+    width: 21.875rem;
+    height: 13.75rem;
+    border-radius: 0.5rem;
+    position: relative;
+    @include mixins.transition;
+    &:hover {
+      transform: translateY(-10px);
+    }
+    .img-overlay {
+      z-index: 1;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: variables.$color-secundary;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 0.5rem;
+      opacity: 0.5;
+      @include mixins.transition;
+      cursor: pointer;
+      &:hover {
+        opacity: 0;
+      }
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+  }
+  span {
+    color: variables.$color-secundary;
+    font-weight: 600;
+  }
+
+  h3 {
+    color: variables.$color-primary;
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: "60rem") {
+    .project-info-container {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: "60rem") {
+    flex-direction: column;
+    align-items: center;
+    span {
+      color: variables.$color-primary;
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+    .project-info-container {
+      position: unset;
+      transform: translateY(0);
+      padding: 0.94rem;
+      border-radius: 0.5rem;
+      background-color: variables.$color-secundary;
+    }
+    i {
+      color: variables.$color-primary;
+    }
+  }
+}
+
+.left {
+  text-align: right;
+  .project-img {
+    animation: project-img-animation 9s ease-in-out infinite;
+  }
+
+  .project-info-title {
+    animation: project-title-animation 10s ease-in-out infinite;
+  }
+}
+
+.right {
+  width: 100%;
+  justify-content: flex-end;
+  .project-img {
+    animation: project-img-animation 7s ease-in-out infinite;
+  }
+  .project-info-title {
+    text-align: left;
+    animation: project-title-animation 10s ease-in-out infinite;
+  }
+
+  .project-info-container {
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .project-box {
+    justify-content: flex-end;
+  }
+}
+
+@keyframes project-img-animation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes project-title-animation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

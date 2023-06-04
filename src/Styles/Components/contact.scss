@@ -1,0 +1,47 @@
+@use '../variables.scss';
+@use '../mixins.scss';
+
+.container-contact {
+    flex-direction: column;
+    min-height: 60vh;
+
+    .contact-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        span {
+            color: variables.$color-secundary;
+            font-family: variables.$font-special;
+        }
+    
+        h3 {
+            margin-top: 1.25rem;
+        }
+    
+        p {
+            width: 80%;
+            text-align: center;
+            margin: 1.25rem 0;
+            font-size: 1.1rem;
+        }
+    
+        .button {
+            @include mixins.button
+        }
+        @media (max-width: '60rem') {
+            width: 90%;
+            h3 {
+                font-size: 2.3rem;
+            }
+
+            p {
+                width: 100%;
+                font-size: 1rem;
+            }
+        }
+    }
+    
+}

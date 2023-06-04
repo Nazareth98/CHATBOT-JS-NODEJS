@@ -1,0 +1,46 @@
+@use "../variables";
+@use "../mixins";
+
+.home-container {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60rem;
+  height: 100vh;
+  .home-content {
+    width: 80%;
+  }
+
+  .home-description {
+    width: 70%;
+    margin: 1.875rem 0;
+  }
+  .button {
+    @include mixins.button;
+  }
+
+  span {
+    color: variables.$color-secundary;
+    font-family: variables.$font-special;
+    display: block;
+    margin-bottom: 1.25rem;
+  }
+
+  h2 {
+    @include mixins.darkenTitle;
+  }
+
+  @media (max-width: "60rem") {
+    padding-top: 3rem;
+    width: 90%;
+    align-items: center;
+    .home-content,
+    .home-description {
+      width: 100%;
+    }
+
+    h1,
+    h2 {
+      font-size: 3rem;
+    }
+  }
+}

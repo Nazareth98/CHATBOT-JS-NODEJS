@@ -1,0 +1,43 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+.card {
+  background-color: variables.$color-alternate;
+  padding: 1.875rem 1.25rem;
+  border-radius: 0.3rem;
+  min-height: 250px;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  @include mixins.transition;
+
+  &:hover {
+    transform: translateY(-0.625rem);
+    h3 {
+      color: variables.$color-secundary;
+    }
+  }
+
+  h3 {
+    color: variables.$color-primary;
+    margin-bottom: 0.625rem;
+    @include mixins.transition;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+
+  .fa-code {
+    font-size: 2.5rem;
+    color: variables.$color-secundary;
+  }
+
+  .project-info-icons {
+    font-size: 1.2rem;
+  }
+}
